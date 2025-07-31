@@ -1,3 +1,4 @@
+import { Header } from "../Header";
 import { Outlet } from "react-router-dom";
 import style from "./MainLayout.module.css";
 
@@ -6,7 +7,7 @@ export const MainLayout = () => {
 
   return (
     <div className={style.mainLayout}>
-      <header>head</header>
+      <Header />
       <div className={style.mainWrapper}>
         <main className={style.main}>
           <Outlet />

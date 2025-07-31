@@ -1,7 +1,13 @@
-import React from "react"
+import style from "./button.module.css";
 
-const Button = () => {
-  return <div>Button</div>
-}
-
-export default Button
+export const Button = (props) => {
+  return (
+    <button
+      className={`${style.btn} ${props.isActive ? style.active : ""}`}
+      onClick={props.onClick}
+      disabled={props.isDisabled}
+    >
+      {props.children}
+    </button>
+  );
+};
