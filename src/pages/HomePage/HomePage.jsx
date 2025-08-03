@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { API_URL } from "../../constants"
-import { QuestionCardList } from "../../components/QuestionCardList/QuestionCardList"
+import { QuestionCardList } from "../../components/QuestionCardList"
+import { Loader } from "../../components/Loader"
 
 export const HomePage = () => {
   const [questions, setQuestions] = useState()
@@ -22,6 +23,7 @@ export const HomePage = () => {
 
   return (
     <>
+      <Loader />
       <QuestionCardList cards={questions} />
     </>
   )
