@@ -16,21 +16,6 @@ export const HomePage = () => {
     return questions
   })
 
-  // const getQuestion = async () => {
-  //   try {
-  //     setIsLoading(true)
-  //     await delayFn(1000)
-  //     const response = await fetch(`${API_URL}/react`)
-  //     const questions = await response.json()
-
-  //     setQuestions(questions)
-  //   } catch (error) {
-  //     console.error(error)
-  //   } finally {
-  //     setIsLoading(false)
-  //   }
-  // }
-
   useEffect(() => {
     getQuestions("react")
   }, [])
