@@ -3,6 +3,8 @@ import { QuestionCardList } from "../../components/QuestionCardList";
 import { Loader } from "../../components/Loader";
 import { API_URL } from "../../constants";
 import { useFetch } from "../../hooks/useFetch.js";
+import { SearchInput } from "../../components/SearchInput";
+import style from "./homepage.module.css";
 
 export const HomePage = () => {
   const [questions, setQuestions] = useState();
@@ -30,8 +32,9 @@ export const HomePage = () => {
   return (
     <>
       {/* <input type="text" ref={inputRef} /> */}
-
-      <input type="text" value={searchValue} onChange={onSearchChangeHandle} />
+      <div className={style.controlsContainer}>
+        <SearchInput value={searchValue} onChange={onSearchChangeHandle} />
+      </div>
 
       {isLoading && <Loader />}
       {error && <p>{error}</p>}
