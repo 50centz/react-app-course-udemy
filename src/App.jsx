@@ -3,7 +3,7 @@ import { MainLayout } from "./components/MainLayout";
 import { HomePage } from "./pages/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import { QuestionPage } from "./pages/QuestionPage/QuestionPage";
-import { AddQuestionPageLazy } from "./pages/AddQuestionPage/AddQuestionPageLazy";
+import { AddQuestionPageLazy } from "./pages/AddQuestionPage";
 
 function App() {
   // return <MainLayout />;
