@@ -9,6 +9,7 @@ export const QuestionForm = ({
 }) => {
   return (
     <form action={formAction} className={style.form}>
+      <input type="text" name="questionId" defaultValue={state.id} hidden />
       <div className={style.formControl}>
         <label htmlFor="questionField">Question: </label>
         <textarea
